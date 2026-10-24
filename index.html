@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MONSTT — Template CV & Produk Digital</title>
+  <meta name="description" content="Template CV Indonesia, CV internasional, surat lamaran, portfolio, dan panduan karier digital.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="navbar">
+  <a href="#beranda" class="logo"><span>✦</span> MONSTT</a>
+
+  <button class="menu-toggle" id="menuToggle" aria-label="Buka menu">☰</button>
+
+  <nav id="navMenu">
+    <a href="#beranda">Beranda</a>
+    <a href="#produk">Produk</a>
+    <a href="#tentang">Tentang</a>
+    <a href="#kontak">Kontak</a>
+  </nav>
+
+  <a href="#produk" class="nav-button">Jelajahi Produk ↗</a>
+</header>
+
+<main>
+  <section class="hero" id="beranda">
+    <div class="hero-content">
+      <span class="eyebrow">TOOLS FOR YOUR NEXT CAREER MOVE</span>
+      <h1>Bangun Kariermu,<br><span>Mulai Lebih Siap.</span></h1>
+      <p>
+        Temukan template CV, surat lamaran, portofolio, dan panduan karier
+        untuk membantumu berkarya lebih cepat dan tampil profesional.
+      </p>
+      <div class="hero-actions">
+        <a href="#produk" class="btn-primary">Lihat Produk ↗</a>
+        <a href="#kontak" class="btn-secondary">Info Produk</a>
+      </div>
+      <div class="hero-note">
+        <span>✓</span> Template digital praktis yang bisa kamu sesuaikan sendiri.
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <div class="visual-glow"></div>
+      <div class="preview-window">
+        <div class="window-bar"><i></i><i></i><i></i><span>my-portfolio.html</span></div>
+        <div class="preview-content">
+          <span class="preview-label">HELLO, I'M</span>
+          <h2>Alex Morgan<span>.</span></h2>
+          <p>Web Developer &amp;<br>Creative Thinker</p>
+          <div class="preview-button">Explore My Work ↗</div>
+          <div class="preview-decoration">A.</div>
+        </div>
+      </div>
+      <div class="floating-card">✦ Template siap disesuaikan</div>
+    </div>
+  </section>
+
+  <section class="catalog section" id="produk">
+    <div class="section-heading">
+      <div>
+        <span class="eyebrow">KATALOG PRODUK</span>
+        <h2>Temukan produk <span>pilihanmu.</span></h2>
+      </div>
+      <p>Perlengkapan praktis untuk menyiapkan lamaran kerja dan membangun karier.</p>
+    </div>
+
+    <div class="toolbar">
+      <div class="filters">
+        <button class="filter active" data-category="Semua">Semua</button>
+        <button class="filter" data-category="Portofolio">Portofolio</button>
+        <button class="filter" data-category="CV & Dokumen">CV &amp; Dokumen</button>
+        <button class="filter" data-category="Desain">Desain</button>
+        <button class="filter" data-category="Panduan">Panduan</button>
+      </div>
+
+      <div class="search-sort">
+        <input type="search" id="searchInput" placeholder="Cari produk...">
+        <select id="sortSelect" aria-label="Urutkan produk">
+          <option value="featured">Pilihan</option>
+          <option value="low">Harga terendah</option>
+          <option value="high">Harga tertinggi</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="product-grid" id="productGrid"></div>
+
+    <div class="empty-state" id="emptyState" hidden>
+      <h3>Produk tidak ditemukan</h3>
+      <p>Coba kata kunci atau kategori lainnya.</p>
+      <button id="resetButton" class="btn-primary">Reset Pencarian</button>
+    </div>
+  </section>
+
+  <section class="contact section" id="kontak">
+    <div>
+      <span class="eyebrow">ADA PERTANYAAN?</span>
+      <h2>Temukan produk yang tepat.</h2>
+      <p>Pilih produk yang sesuai dengan kebutuhanmu dan lanjutkan ke halaman akses produk.</p>
+    </div>
+    <a href="#produk" class="btn-light">Lihat Produk ↗</a>
+  </section>
+</main>
+
+<footer>
+  <a href="#beranda" class="logo"><span>✦</span> MONSTT</a>
+  <p>Template CV dan tools praktis untuk persiapan karier.</p>
+  <small>© <span id="year"></span> MONSTT. All rights reserved.</small>
+</footer>
+
+<div class="modal-backdrop" id="productModal" hidden>
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <button class="modal-close" id="modalClose" aria-label="Tutup">×</button>
+    <div id="modalArtwork"></div>
+    <div class="modal-body">
+      <span class="eyebrow" id="modalCategory"></span>
+      <h2 id="modalTitle"></h2>
+      <p id="modalDescription"></p>
+      <div class="modal-price" id="modalPrice"></div>
+      <h3>Yang kamu dapatkan</h3>
+      <ul id="modalFeatures"></ul>
+      <a href="#" target="_blank" rel="noopener noreferrer" class="btn-primary" id="modalContact">Akses Produk ↗</a>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
